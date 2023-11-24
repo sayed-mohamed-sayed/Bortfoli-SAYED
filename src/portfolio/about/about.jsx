@@ -1,0 +1,51 @@
+// @flow strict
+import "./about.css"
+import * as React from 'react';
+import {BsFacebook} from "react-icons/bs"
+import {BsCardList} from "react-icons/bs"
+import {AiFillLinkedin} from "react-icons/ai"
+import {AiFillTwitterSquare} from "react-icons/ai"
+import{useState ,useEffect} from "react"
+import Header from "../header/header";
+function Foter() {
+
+
+    const [toggle,settoggle]=useState(false)
+    const [name ,setname]=useState("FRONTEND DEVOLVER")
+    const [slicename ,setslicename]=useState("")
+useEffect(()=>{
+setTimeout(() => {
+    setslicename(name.slice(0,slicename.length+1))
+}, 400);
+
+},[slicename])
+
+    return (
+        <>
+        <div className='home-about'>
+            <Header/>
+            <div className="about">
+                <div className="about-learn">
+                    <h4>About</h4>
+                    <h1><span>L</span>EARN MORE ABOUT ME</h1>
+                </div>
+                <div className="contaner">
+
+                <div className="box-1">
+                    <img src="./4.jpeg" alt="no Data" />
+                </div>
+                <div className="box-2">
+                    <h1>{slicename}</h1>
+                    <p><span>></span> Birthday:1 /6/2000</p>
+                    <p><span>></span>Phone: 01018364752</p>
+                    <p><span>></span>City:Cairo</p>
+                    <p><span>></span>ABO HAMAD</p>
+                </div>
+                </div>
+        </div>
+            </div>
+        </>
+    );
+};
+
+export default Foter;
