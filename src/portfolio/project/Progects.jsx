@@ -7,12 +7,50 @@ import { AiFillLinkedin } from "react-icons/ai"
 import { AiFillTwitterSquare } from "react-icons/ai"
 import { useState } from "react"
 import Header from "../header/header";
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 function Progect() {
 
+    React.useEffect(()=>{
+        Aos.init({duration:3000})
+    },[])
 
     const [togglecss, settogglecss] = useState(true)
     const [togglejs, settogglejs] = useState(false)
     const [togglereact, settogglereact] = useState(false)
+    const [data, setdata] = useState([
+        {
+            id:1,
+            img:"./2.jpeg",
+            title:"html -css -js",
+            url:"localljo",
+        }, {
+            id:2,
+            img:"./2.jpeg",
+            title:"html -css -js",
+            url:"localljo",
+        }, {
+            id:3,
+            img:"./2.jpeg",
+            title:"React js",
+            url:"localljo",
+        }, {
+            id:4,
+            img:"./2.jpeg",
+            title:"React js",
+            url:"localljo",
+        }, {
+            id:5,
+            img:"./2.jpeg",
+            title:"Next js -tailwind",
+            url:"Next js -tailwind",
+        }, {
+            id:6,
+            img:"./2.jpeg",
+            title:"Next js -tailwind",
+            url:"localljo",
+        },
+    ])
     const toglecss=()=>{
         settogglecss(true)
         settogglejs(false)
@@ -34,7 +72,7 @@ function Progect() {
             <div className="img">
                 {/* <img src="./2.jpeg" alt="" /> */}
             </div>
-            <div className="contaner">
+            <div className="contaner" data-aos="zoom-in">
 
 
                 <div className="header">
@@ -45,7 +83,20 @@ function Progect() {
                     <h1>MY W<span>O</span>RK</h1>
                 </div>
                 <div className="boxs">
-                <div className="titles"><h2 onClick={()=>toglecss()}>html-css</h2>
+                <div className="imgs">
+                    {
+                        data&&data.map((i)=>(
+                            <div key={i.id} className=" box">
+                        <img src={i.img} alt="no data" />
+                        
+
+<p>{i.title}</p>
+            
+                        </div>
+                        ))
+                    }
+                    </div>
+                {/* <div className="titles"><h2 onClick={()=>toglecss()}>html-css</h2>
                 <h2 onClick={()=>toglejs()}>html-css-js</h2>
                 <h2 onClick={()=>toglereact()}>react js-type</h2>
                 <h2 onClick={()=>toglereact()}>Nextjs-tailwind</h2>
@@ -71,6 +122,10 @@ function Progect() {
 
                         </div>
                         <div className="box5 box">
+                        <img src="./4.jpeg" alt="no data" />
+
+                        </div> 
+                        <div className="box6 box">
                         <img src="./4.jpeg" alt="no data" />
 
                         </div>
@@ -129,7 +184,8 @@ function Progect() {
                     </div>
                 </div>
 
-                }
+                } */}
+
                 </div>
             </div>
         </div>

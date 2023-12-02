@@ -27,6 +27,9 @@
     color:white;
 font-weight: bold;
 }
+.home-headers .nav-link li,a:hover{
+    color: #ffffff87;
+}
 @media (max-width:830px) {
     .headerport{
      
@@ -49,8 +52,14 @@ font-weight: bold;
     .nav-link{
         display: flex;
         flex-direction: column;
-        text-align: center;
+        text-align: start !important;
         align-items: center;
+        position: relative;
+        right: 70px;
+        bottom: 50px;
+    }
+    .nav-link li{
+        text-align: start !important;
     }
     .headname{
         margin-top: 20px;

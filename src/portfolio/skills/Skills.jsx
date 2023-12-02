@@ -1,63 +1,16 @@
-// // @flow strict
-// import "./skils.css"
-// import * as React from 'react';
-// import { BsFacebook } from "react-icons/bs"
-// import { BsCardList } from "react-icons/bs"
-// import { AiFillLinkedin } from "react-icons/ai"
-// import { AiFillTwitterSquare } from "react-icons/ai"
-// import { useState } from "react"
-// import Header from "../header/header";
-
-// function Skils() {
-
-//     const [toggle, settoggle] = useState(false)
-//     setTimeout(() => {
-//         settoggle(true)
-//     }, 500);
-//     return (
-//         <div className='home-skils'>
-//             <Header/>
-//               <div className="img">
-//                 <img src="./2.jpeg" alt="no data" />
-//             </div>
-//             <div className="contaner">
-
-//            <div className="header">
-//                <h1>S<span>K</span>ILLs</h1>
-//            </div>
-//            <div className="skil">
-             
-
-//     <div className="boxskil" > <span className={toggle&& "span"} style={{width:toggle?"90%":"0px" }}><h4 >Html</h4></span > </div>
-//     <div className="boxskil" > <span className={toggle&& "span"} style={{width:toggle?"85%":"0px" }}><h4 >css</h4></span > </div>
-//     <div className="boxskil" > <span className={toggle&& "span"} style={{width:toggle?"80%":"0px" }}><h4 >js</h4></span> </div>
-//     <div className="boxskil" > <span className={toggle&& "span"} style={{width:toggle?"70%":"0px"}}><h4 >pootstrap</h4></span> </div>
-//     <div className="boxskil" > <span className={toggle&& "span"} style={{width:toggle?"60%":"0px" }}><h4 >reactjs</h4></span> </div>
-
-
-//            </div>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default Skils;
-
-
-
-
-
-
-// @flow strict
 import "./skils.css"
 import * as React from 'react';
-import { BsFacebook } from "react-icons/bs"
-import { BsCardList } from "react-icons/bs"
-import { AiFillLinkedin } from "react-icons/ai"
-import { AiFillTwitterSquare } from "react-icons/ai"
 import { useState } from "react"
 import Header from "../header/header";
-
+import Aos from 'aos';
+import {FaJsSquare} from "react-icons/fa"
+import {FaBootstrap} from "react-icons/fa6"
+import {SiNextdotjs} from "react-icons/si"
+import {FaReact} from "react-icons/fa"
+import {FaCss3Alt} from "react-icons/fa6"
+import {SiTailwindcss} from "react-icons/si"
+import {ImHtmlFive2} from "react-icons/im"
+import 'aos/dist/aos.css'
 function Skils() {
 
     const [toggle, settoggle] = useState(false)
@@ -91,20 +44,51 @@ function Skils() {
     setTimeout(() => {
         settoggle(true)
     }, 500);
+
+    React.useEffect(()=>{
+        Aos.init({duration:3000})
+    },[])
     return (
         <div className='home-skils'>
             <Header/>
               <div className="img">
                 {/* <img src="./2.jpeg" alt="no data" /> */}
             </div>
-            <div className="contaner">
+            <div className="contaner" data-aos="zoom-in">
 
            <div className="header">
                <h1>S<span>K</span>ILLs</h1>
            </div>
-             
-        <div className="box-skills">
-            {
+        <div className="box-skills" >
+<div className="box">
+    <i><ImHtmlFive2/></i>
+    <p>Html</p>
+</div>
+<div className="box"> <i><FaCss3Alt/></i>
+    <p>Css</p></div>
+<div className="box"> <i><FaJsSquare/></i>
+    <p>Js</p></div>
+<div className="box">
+<i><FaReact/></i>
+    <p>React</p>
+</div>
+<div className="box">
+<i><SiNextdotjs/></i>
+    <p>Next</p>
+</div>
+<div className="box t">
+<i>ts</i>
+    <p>TypeScript</p>
+</div>
+<div className="box">
+<i><FaBootstrap/></i>
+    <p>BootStrap</p>
+</div>
+<div className="box">
+<i><SiTailwindcss/></i>
+    <p>TailwindCss</p>
+</div>
+            {/* {
                 data&&data.map((i)=>(
                     <div key={i.id} className="box">
                         <div className="imgs">
@@ -112,7 +96,7 @@ function Skils() {
                         </div>
                     </div>
                 ))
-            }
+            } */}
            
 
            </div>

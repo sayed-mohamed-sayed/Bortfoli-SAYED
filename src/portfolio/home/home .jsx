@@ -8,65 +8,54 @@ import {AiFillLinkedin} from "react-icons/ai"
 import {AiFillTwitterSquare} from "react-icons/ai"
 import{useState ,useEffect} from "react"
 import { NavLink } from "react-router-dom";
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 function Foter() {
 
     const [toggle,settoggle]=useState(false)
-    const [name ,setname]=useState("SAYED MOHAMED")
-    const [slicename ,setslicename]=useState("")
-    // useEffect(()=>{
-        
-    //         const interval=setTimeout(()=>{
-    //             setslicename(name.slice( 0,slicename.length+1))
-    //         },1000)
-    //     if (slicename.length >=name.length) {
-    //         const intervals=setTimeout(()=>{
-    //             setslicename(name.slice( slicename.length+1 ,0))
-    //         },3000)        }
-    // },[slicename])
-
-
+useEffect(()=>{
+    Aos.init({duration:3000})
+},[])
 
     return (
-        <div className='home-portfolio'>
-            <div className="img">
-                {/* <img src="./2.jpeg" alt="no data" /> */}
-            </div>
-            <div className="home-header">
-                <div className="box">
-            <div className="head">
-                {/* <h1>{slicename} </h1> */}
-                <h1>S<span>A</span>YED MOH<span>A</span>MED</h1>
-                <h5>Iam<span>front end devlover</span>from cairo</h5>
-            </div>
-            <div className="nav">
-
+        <div className='home-portfolio ' >
+            
 <i className='toggle-1' style={{display:toggle&&"none" }} onClick={()=>settoggle(true)} ><BsCardList/></i>
 <i className='toggle-2' style={{display:toggle&&"block" }} onClick={()=>settoggle(false)}>x</i>
+            <div className="home-header" >
+                <div className="box" >
+            <div className="head" data-aos="zoom-in">
+                <h1>S<span>A</span>YED MOH<span>A</span>MED</h1>
+                <h2>Iam<span>front end devlover</span>from cairo</h2>
+            </div>
+            <div className="nav">
+<div className={!toggle?"navlink":"togglep"}>
 
-           <ul className={!toggle?"navlink":"togglep"}>
-                           
-           <li><NavLink to="/">HOME </NavLink></li>
+           <ul data-aos="zoom-in">                
+           <li><NavLink to="/" >HOME </NavLink></li>
                 
                  
-                <li><NavLink to="/about">ABOUT </NavLink></li>
+                <li><NavLink to="/about" d>ABOUT </NavLink></li>
                
                 
-                <li><NavLink to="/skills"> SKILLS</NavLink></li>
+                <li><NavLink to="/skills" > SKILLS</NavLink></li>
                 
                 
-                <li><NavLink to="/progect">PORTFOLIO</NavLink></li>
+                <li><NavLink to="/progect" > PORTFOLIO</NavLink></li>
                 
                 
-                <li><NavLink to="/contact">CONTACT</NavLink></li>
+                <li><NavLink to="/contact" >CONTACT</NavLink></li>
            </ul>
+</div>
+
             </div>
-<div className="icon">
+<div className="icon" data-aos="zoom-in">
     <i><AiFillLinkedin/></i>
     <i><BsFacebook/></i>
     <i><AiFillTwitterSquare/></i>
 </div>
 
-  <button className="download-cv"><a href="./jss.pdf">Download Cv</a></button>
+  <button className="download-cv" data-aos="zoom-in"><a href="./jss.pdf">Download Cv</a></button>
                
                 </div>
             </div>

@@ -48,6 +48,8 @@ display: grid;
 grid-template-columns: repeat(10 ,1fr);
 grid-template-rows:  repeat(1 ,1fr);
 gap: 5px;
+top: 100px;
+position: relative;
 
     }
 .home-contact .box{
@@ -55,11 +57,9 @@ gap: 5px;
     position: relative;
     z-index: 9999999;
     width: 100%;
-    height: 100%;
+    height: 150px;
     margin: 2px;
     text-align: center;
-    top: 100px;
-    padding: 50px 0px 0px 0px;
     
 }
 .home-contact .box1{
@@ -77,17 +77,40 @@ grid-column: 1 /span 5
     grid-row: 2 /span 1;
     grid-column: 6 /span 5;
 }
-.home-contact .box .email{
-    font-size: medium;
+.home-contact .box h1{
+    font-weight: bold;
+color:#ffffff87;
+font-size:xx-large;
 }
+
 .home-contact .box h2{
     font-weight: bold;
-color:
-#ffffff87;
-font-size:large;
+color:white;
+font-size:xx-large;
 }
+@media (max-width:920px) {
+    .home-contact .box h2{
+    font-size:x-large;
+    }
+    .home-contact .box h1{
+        font-size:x-large;
+        }
+}
+@media (max-width:750px) {
+    .home-contact .box h2{
+    font-size:large;
+    }
+
+    .home-contact .box h1{
+        font-size:large;
+        }
+}
+
 @media (max-width:600px) {
     
+    .home-contact .box{
+        height: 100px;
+    }
 
 .home-contact .box1{
     grid-row: 1 /span 1;
@@ -102,4 +125,29 @@ font-size:large;
     grid-row: 3 /span 1;
     grid-column: 1 /span 10;
 }
+
+.home-contact .box .email{
+    font-size: medium;
+}
+.home-contact .box h2{
+    font-weight: bold;
+color:
+#ffffff87;
+font-size:large;
+}
+}
+.home-contact .box .icon{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;}
+    .home-contact .box .icon i {
+    font-size: x-large;
+    cursor: pointer;
+    margin: 5px;
+    color: white;
+
+}
+.home-contact .box .icon i:hover{
+    color: #18d26e;
 }

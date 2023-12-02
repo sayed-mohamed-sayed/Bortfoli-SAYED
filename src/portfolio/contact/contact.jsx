@@ -7,8 +7,13 @@ import { AiFillLinkedin } from "react-icons/ai"
 import { AiFillTwitterSquare } from "react-icons/ai"
 import { useState } from "react"
 import Header from "../header/header";
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 function Contact() {
 
+  React.useEffect(()=>{
+    Aos.init({duration:3000})
+},[])
 
   
     return (
@@ -16,29 +21,33 @@ function Contact() {
             <Header/>
             <div className="contact">
             <div className="img">
-                {/* <img src="./2.jpeg" alt="" /> */}
             </div>
               
-              <div className="contaner">
+              <div className="contaner" data-aos="zoom-in" >
                 <div className="header-contact">
-                    <h6>contact</h6>
+                    <h3>contact</h3>
                     <h2>C<span>o</span>ntact <span>M</span>e</h2>
                 </div>
-                <div className="details">
-              <div className="box1 box">
-              <h2>MY ADRESS</h2>
+                <div className="details" >
+              <div className="box1 box" >
+              <h1>MY ADRESS</h1>
               <h2>ABO HAMAD</h2>
 
               </div>
               <div className="box2 box">
-              <h2>EMAIL ME</h2>
+              <h1>EMAIL ME</h1>
               <h2 className="email">sa3356139@gmail.com</h2>
               </div>
               <div className="box3 box">
-              <h2>Social Profiles</h2>
-
+              <h1>Social Profiles</h1>
+              <div className="icon">
+<i><BsFacebook/></i>
+<i><AiFillLinkedin/></i>
+<i><AiFillTwitterSquare/></i>
+              </div>
               </div>
               <div className="box4 box">
+                <h1>CALL ME</h1>
               <h2>01018364752</h2>
 
               </div>

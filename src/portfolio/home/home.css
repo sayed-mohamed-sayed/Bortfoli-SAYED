@@ -81,21 +81,31 @@ padding: 0px 0 0 25px;
     font-size: 2.5rem;
 }
 
- .navlink {
+ .navlink ul{
     display: flex;
     text-align: center;
     padding: 0px 0 0 25px;
 
 }
+.togglep ul{
+    position: relative;
+    top: 60px;
+}
 
-.home-portfolio .home-header .navlink li ,
-.togglep li {
-    margin: 0px;
+.home-portfolio .home-header .navlink ul li ,
+.togglep ul li {
+    margin: 10px;
     font-weight: bolder;
     font-size: larger;
     list-style: none;
     cursor: pointer;
     color: white;
+    text-align: start;
+    position: relative;
+    right: 35px
+}
+.home-portfolio .home-header .navlink ul li a:hover{
+    color: #ffffff87;
 }
 .icon{
     text-align: start;
@@ -120,12 +130,12 @@ padding: 0px 0 0 25px;
 
     .toggle-1 {
         display: block;
-        font-size: x-large;
+        font-size: xx-large;
         color: white;
         cursor: pointer;
         position: fixed;
         right: 20px;
-        top: 0;
+        top: 20px;
         z-index: 9999;
     }
    
@@ -191,4 +201,7 @@ height: 30px;
     font-weight: bold;
     color:    rgb(255, 255, 255);
     padding: 20px;
+}
+.download-cv a:hover{
+    color: #ffffff87;
 }
