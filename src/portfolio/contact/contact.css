@@ -135,6 +135,10 @@ color:
 #ffffff87;
 font-size:large;
 }
+.box3 .icon  i{
+    font-size: large !important;
+    margin: 3px !important;
+}
 }
 .home-contact .box .icon{
     display: flex;
