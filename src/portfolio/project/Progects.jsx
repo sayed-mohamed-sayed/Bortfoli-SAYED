@@ -21,32 +21,32 @@ function Progect() {
     const [data, setdata] = useState([
         {
             id:1,
-            img:"./2.jpeg",
+            img:"./doctor.jpeg",
             title:"html -css -js",
             url:"localljo",
         }, {
             id:2,
-            img:"./2.jpeg",
+            img:"./pookshop.jpeg",
             title:"html -css -js",
             url:"localljo",
         }, {
             id:3,
-            img:"./2.jpeg",
+            img:"./shopping.jpeg",
             title:"React js",
             url:"localljo",
         }, {
             id:4,
-            img:"./2.jpeg",
+            img:"./shopping.jpeg",
             title:"React js",
             url:"localljo",
         }, {
             id:5,
-            img:"./2.jpeg",
+            img:"./pookshop.jpeg",
             title:"Next js -tailwind",
             url:"Next js -tailwind",
         }, {
             id:6,
-            img:"./2.jpeg",
+            img:"./doctor.jpeg",
             title:"Next js -tailwind",
             url:"localljo",
         },
