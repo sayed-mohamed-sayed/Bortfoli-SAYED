@@ -1,6 +1,4 @@
-// @flow strict
 import "./about.css"
-import * as React from 'react';
 import {BsFacebook} from "react-icons/bs"
 import {BsCardList} from "react-icons/bs"
 import {AiFillLinkedin} from "react-icons/ai"

@@ -9,6 +9,7 @@ import { useState } from "react"
 import Header from "../header/header";
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import { Link } from "react-router-dom";
 function Progect() {
 
     React.useEffect(()=>{
@@ -23,26 +24,26 @@ function Progect() {
             id:1,
             img:"./doctor.jpeg",
             title:"html -css -js",
-            url:"localljo",
+            url:"https://progect-doctor.vercel.app/",
         }, {
             id:2,
             img:"./pookshop.jpeg",
             title:"html -css -js",
-            url:"localljo",
+            url:"https://pook-shoop.vercel.app/",
         }, {
             id:3,
             img:"./shopping.jpeg",
             title:"React js",
-            url:"localljo",
+            url:"https://shopping-1.vercel.app/",
         }, {
             id:4,
-            img:"./shopping.jpeg",
-            title:"React js",
-            url:"localljo",
+            img:"./edcut.jpeg",
+            title:"Next js -ts -tailwind css",
+            url:"https://educational-site-one.vercel.app/",
         }, {
             id:5,
             img:"./pookshop.jpeg",
-            title:"Next js -tailwind",
+            title:"Next js -tailwind css",
             url:"Next js -tailwind",
         }, {
             id:6,
@@ -87,10 +88,15 @@ function Progect() {
                     {
                         data&&data.map((i)=>(
                             <div key={i.id} className=" box">
-                        <img src={i.img} alt="no data" />
+<div className="Link">
+<Link to={i.url}></Link>
+
+</div>
+
+  <img src={i.img} alt="no data" />
                         
 
-<p>{i.title}</p>
+{/* <p>{i.title}</p> */}
             
                         </div>
                         ))

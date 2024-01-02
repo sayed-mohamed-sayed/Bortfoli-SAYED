@@ -19,7 +19,32 @@ background-blend-mode: darken;}
     width: 90%;
     height: fit-content;
 }
+.box-2 h1{
+    width: 220px;
+}
+@media (max-width:580px) {
+    .box-2{
+    line-height: 10px;
+    }
+    
+}
+@media (max-width:360px) {
+    .box-1{
+width: 70% !important;    }
+.box-1 img{
+    width: 100% !important;
+}
+    
+}
+@media (max-width:540px) {
+    .box-1{
+width: 58% !important;    }
+.box-2{
+    line-height: 5px;
+}
 
+    
+}
 @media (min-width:830px) {
     .home-about .headerport{
         top: 0;
