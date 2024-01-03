@@ -26,7 +26,7 @@ useEffect(()=>{
                 <div className="box" >
             <div className="head" data-aos="zoom-in">
                 <h1>S<span>A</span>YED MOH<span>A</span>MED</h1>
-                <h2>Iam<span>front end devlover</span>from cairo</h2>
+                <h2>Iam<span>front end developer</span>from cairo</h2>
             </div>
             <div className="nav">
 <div className={!toggle?"navlink":"togglep"}>
