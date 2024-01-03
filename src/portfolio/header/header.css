@@ -75,7 +75,7 @@ font-weight: bold;
 .home-headers .toggle-2{
     position: absolute;
     right: 217px;
-    z-index: 999999999999999999999;
+    z-index: 99999999999999999999999999999999 !important;
     border-bottom-right-radius: 23px;
     border-bottom: dashed white;
 }
