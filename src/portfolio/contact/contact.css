@@ -120,7 +120,11 @@ font-size:xx-large;
     grid-row: 2 /span 1;
     grid-column: 1 /span 10;
 }
-
+@media (max-width:350px) {
+    .home-contact .box h2{
+    font-size: medium !important;
+}
+}
 .home-contact .box2 {
     grid-row: 3 /span 1;
     grid-column: 1 /span 10;

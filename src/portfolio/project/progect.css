@@ -36,11 +36,7 @@ background-blend-mode: darken;
 }
 
 .home-progect .contaner .imgs {
-    /* display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    flex-wrap: wrap; */
+  
     display: grid;
     grid-template-columns: repeat(9, 1fr);
 
@@ -101,7 +97,7 @@ background-blend-mode: darken;
 @media (max-width:800px) {
 
    .home-progect{
-    height: 120vh;
+    height: 125vh;
    } 
 .home-progect .contaner .imgs {
    
@@ -122,7 +118,7 @@ background-blend-mode: darken;
 
 @media (max-width:450px) {    
     .home-progect{
-        height: 200vh;
+        height: 220vh;
     }
     .home-progect .contaner .imgs .box{
         flex-basis: 90%;
