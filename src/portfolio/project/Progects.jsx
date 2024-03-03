@@ -33,19 +33,19 @@ function Progect() {
       id: 4,
       img: "./shopping5.jpg",
       title: "Next js -ts -tailwind css",
-      url: "https://educational-site-one.vercel.app/",
+      url: "https://shoopingcart2.vercel.app/",
     },
     {
       id: 5,
       img: "./edcut.jpeg",
       title: "Next js -tailwind css",
-      url: "Next js -tailwind",
+      url: "https://educational-site-umber.vercel.app/",
     },
     {
       id: 6,
       img: "./furnuter.jpeg",
       title: "Next js -tailwind",
-      url: "localljo",
+      url: "https://shopping-wood.vercel.app/",
     },
   ]);
 
