@@ -11,7 +11,7 @@ function Foter() {
 
 
     const [toggle,settoggle]=useState(false)
-    const [name ,setname]=useState("FRONTEND DEVOLVER")
+    const [name ,setname]=useState("Front Developer")
     const [slicename ,setslicename]=useState("")
 useEffect(()=>{
 setTimeout(() => {

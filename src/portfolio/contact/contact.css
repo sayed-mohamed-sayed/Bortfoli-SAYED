@@ -22,7 +22,7 @@ background-blend-mode: darken;
     background-color:#000000a8;
 position: absolute;
 width: 70%;
-height: 70%;
+height: 80%;
 }
 
 
@@ -143,6 +143,10 @@ font-size:large;
     font-size: large !important;
     margin: 3px !important;
 }
+.box .icon{
+    position: relative;
+    left: -10px;
+}
 }
 .home-contact .box .icon{
     display: flex;
@@ -159,3 +163,11 @@ font-size:large;
 .home-contact .box .icon i:hover{
     color: #18d26e;
 }
+
+
+
+
+
+
+
+

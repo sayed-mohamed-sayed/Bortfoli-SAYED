@@ -1,16 +1,36 @@
-// @flow strict
 
-import * as React from 'react';
 import "./home.css"
-import {BsFacebook} from "react-icons/bs"
+import {BsFacebook, BsGithub, BsWhatsapp} from "react-icons/bs"
 import {BsCardList} from "react-icons/bs"
 import {AiFillLinkedin} from "react-icons/ai"
-import {AiFillTwitterSquare} from "react-icons/ai"
 import{useState ,useEffect} from "react"
 import { NavLink } from "react-router-dom";
 import Aos from 'aos';
 import 'aos/dist/aos.css'
-function Foter() {
+function Home() {
+    const [Head ,setHead]=useState([
+        {
+            title:"HOME",
+            link:"/"   
+           },
+           {
+            title:"ABOUT",
+            link:"/about"   
+           },
+           {
+            title:"SKILLS",
+            link:"/skills"   
+           },   
+           {
+            title:"PORTFOLIO",
+            link:"/progect"   
+           },
+           {
+            title:"CONTACT",
+            link:"/contact"   
+           },
+                                    
+    ])
 
     const [toggle,settoggle]=useState(false)
 useEffect(()=>{
@@ -31,28 +51,23 @@ useEffect(()=>{
             <div className="nav">
 <div className={!toggle?"navlink":"togglep"}>
 
-           <ul data-aos="zoom-in">                
-           <li><NavLink to="/" >HOME </NavLink></li>
+           <ul data-aos="zoom-in">       
+           {
+            Head&&Head.map((i,o)=>(
                 
-                 
-                <li><NavLink to="/about" d>ABOUT </NavLink></li>
-               
+                <li key={o}><NavLink to={`${i.link}`} key={o}>{i.title}</NavLink></li>
+            ))
+           }         
                 
-                <li><NavLink to="/skills" > SKILLS</NavLink></li>
-                
-                
-                <li><NavLink to="/progect" > PORTFOLIO</NavLink></li>
-                
-                
-                <li><NavLink to="/contact" >CONTACT</NavLink></li>
            </ul>
 </div>
 
             </div>
 <div className="icon" data-aos="zoom-in">
-    <i><AiFillLinkedin/></i>
-    <i><BsFacebook/></i>
-    <i><AiFillTwitterSquare/></i>
+<i><BsFacebook/></i>
+<i><BsWhatsapp/></i>
+<i><BsGithub/></i>
+<i><AiFillLinkedin/></i>
 </div>
 
   <button className="download-cv" data-aos="zoom-in"><a href="./jss.pdf">Download Cv</a></button>
@@ -63,4 +78,10 @@ useEffect(()=>{
     );
 };
 
-export default Foter;
+export default Home;
+
+
+
+
+
+

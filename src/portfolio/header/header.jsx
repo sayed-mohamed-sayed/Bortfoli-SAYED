@@ -1,10 +1,6 @@
-// @flow strict
 import "./header.css"
 import * as React from 'react';
-import { BsFacebook } from "react-icons/bs"
 import { BsCardList } from "react-icons/bs"
-import { AiFillLinkedin } from "react-icons/ai"
-import { AiFillTwitterSquare } from "react-icons/ai"
 import { useState } from "react"
 import { NavLink } from "react-router-dom";
 
@@ -12,6 +8,29 @@ function Header() {
 
 
     const [toggle, settoggle] = useState(false)
+    const [Head ,setHead]=useState([
+        {
+            title:"HOME",
+            link:"/"   
+           },
+           {
+            title:"ABOUT",
+            link:"/about"   
+           },
+           {
+            title:"SKILLS",
+            link:"/skills"   
+           },   
+           {
+            title:"PORTFOLIO",
+            link:"/progect"   
+           },
+           {
+            title:"CONTACT",
+            link:"/contact"   
+           },
+                                    
+    ])
     return (
         <div className="home-headers">
 
@@ -25,20 +44,12 @@ function Header() {
          <nav>
              <ul className="nav-link">
                  
-                 <li><NavLink to="/">HOME </NavLink></li>
+             {
+            Head&&Head.map((i,o)=>(
                 
-                 
-                 <li><NavLink to="/about">ABOUT </NavLink></li>
-                
-                 
-                 <li><NavLink to="/skills"> SKILLS</NavLink></li>
-                 
-                 
-                 <li><NavLink to="/progect">PORTFOLIO</NavLink></li>
-                 
-                 
-                 <li><NavLink to="/contact">CONTACT</NavLink></li>
-                 
+                <li key={o}><NavLink to={`${i.link}`} key={o}>{i.title}</NavLink></li>
+            ))
+           }      
              </ul>
          </nav>
         </div>
